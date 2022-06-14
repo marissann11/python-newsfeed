@@ -1,4 +1,5 @@
 from app.routes import home
+from app.routes import home, dashboard
 from flask import Flask
 
 
@@ -16,3 +17,7 @@ def create_app(test_config=None):
     # register routes
     app.register_blueprint(home)
     return app
+
+
+app.register_blueprint(home)
+app.register_blueprint(dashboard)
